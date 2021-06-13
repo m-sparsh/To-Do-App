@@ -21,15 +21,14 @@
     margin:5px 0 5px 5px;;
     border:2px solid #ccc;
     border-radius:5px;
-    padding:2px 2px 2px 5px;;
-    color:#aaa;
+    padding:2px 2px 2px 5px;
     font-size:1.1rem;
     -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 .Input:focus{
     width:90%;
-    border: 2px solid red;
+    border: 2px solid #aaa;
 }
 
 .Textarea{
@@ -39,7 +38,6 @@
     border:2px solid #ccc;
     border-radius:5px;
     padding:2px 2px 2px 5px;;
-    color:#ccc;
     font-size:1.1rem;
     -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
