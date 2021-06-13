@@ -1,0 +1,77 @@
+.Container{
+    box-sizing:border-box;
+    height:auto;
+    width:40%;
+    margin: 100px auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px 1px #eee;
+}
+
+.Label{
+    margin: 15px 5px;
+    font-size:1.5rem;
+    color:blue;
+    font-weight:bold;
+}
+
+.Input{
+    width:30%;
+    height:30px;
+    margin:5px 0 5px 5px;;
+    border:2px solid #ccc;
+    border-radius:5px;
+    padding:2px 2px 2px 5px;;
+    color:#aaa;
+    font-size:1.1rem;
+    -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.Input:focus{
+    width:90%;
+    border: 2px solid red;
+}
+
+.Textarea{
+    width:30%;
+    height:50px;
+    margin:5px 0 0 5px;;
+    border:2px solid #ccc;
+    border-radius:5px;
+    padding:2px 2px 2px 5px;;
+    color:#ccc;
+    font-size:1.1rem;
+    -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+}
+.Textarea:focus{
+    width:90%;
+    height:90px;
+    border: 2px solid #ccc;
+}
+.button{
+    
+    float:right;
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    border:none;
+    background:blue;
+    color:white;
+    font-size:1.3rem;
+    cursor:pointer;
+}
+
+@media (max-width: 750px){
+    .Container{
+    box-sizing:border-box;
+    height:auto;
+    width:60%;
+    margin: 100px auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px 1px #eee;
+}
+}

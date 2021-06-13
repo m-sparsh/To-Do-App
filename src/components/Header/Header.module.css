@@ -1,0 +1,148 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style: none;
+    box-sizing:border-box;
+    
+}
+
+nav{
+    background:blue;
+    height:80px;
+    width:100%;
+}
+label.Logo{
+    color:white;
+    font-size: 35px;
+    line-height:80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+   
+    float:right;
+    margin-right:40px;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.Active, a:hover{
+    background: #1b9bff;
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height:80px;
+    margin-right: 40px;
+    margin-top: 25px;
+    cursor:pointer;
+    display:none;
+}
+
+#check{
+    display:none;
+}
+
+@media (max-width: 952px){
+    label.Logo{
+        font-size: 30px;
+        padding-left:50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    .checkbtn{
+        
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height:80px;
+    margin-right: 40px;
+    margin-top: 25px;
+    cursor:pointer;
+    display:none;
+}
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display:block;
+        z-index:100;
+    }
+    ul{
+        z-index:100;
+        position:fixed;
+        width:30%;
+        height:30%;
+        top:80px;
+        background: #2c3e50;
+        right:-100%;
+        text-align:center;
+        transition : all .5s;
+        
+    }
+    nav ul li{
+        display:block;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.Active{
+        background:none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        right:0;
+        margin-right:0;
+        border-radius: 0 0 0 150px;;
+    }
+}
+
+@media (max-width: 550px){
+    .checkbtn{
+        display:block;
+        
+    }
+    ul{
+        
+        position:fixed;
+        width:40%;
+        height:35%;
+        top:80px;
+        background: #2c3e50;
+        right:-100%;
+        text-align:center;
+        transition : all .5s;
+        
+    }
+    nav ul li{
+        display:block;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.Active{
+        background:none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        z-index:100;
+        right:0;
+        margin-right:0;
+        border-radius: 0 0 0 150px;
+    }
+}
