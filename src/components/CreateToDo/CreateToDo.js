@@ -4,13 +4,28 @@ import axios from 'axios';
 class CreateToDo extends Component {
     state={
         title: "",
-        content: ""
+        content: "",
+        valid: false,
+        validation:{
+            required: true
+        }
     }
+
+    checkValidity(value1,value2, rules){
+        let isValid= false;
+        if(rules.required){
+            isValid = value1.trim() && value2.trim() !== '';
+        }
+        return isValid;
+    }
+
     postDataHandler = () => {
         const data={
             title: this.state.title,
             content: this.state.content
         }
+        this.state.valid = this.checkValidity(data.title,data.content,this.state.validation);
+        if(this.state.valid){
         axios.post('https://to-do-fbf68-default-rtdb.asia-southeast1.firebasedatabase.app/data.json', data)
         .then(response=> {
             alert('Your notes has been saved!!');
@@ -20,6 +35,9 @@ class CreateToDo extends Component {
             });
             })
         .catch(error=>console.log(error));
+        }else{
+            alert('All fields are required to be filled!!');
+        }
     }
 
     render(){

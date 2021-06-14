@@ -1,7 +1,5 @@
 import classes from './ListCard.module.css';
 import axios from 'axios';
-import { Route } from 'react-router-dom';
-import CreateToDo from '../CreateToDo/CreateToDo.js';
 
 
 
